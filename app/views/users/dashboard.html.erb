@@ -1,0 +1,11 @@
+<h1>Dashboard</h1>
+
+<div class="row">
+	<div class="col-sm-4">
+		<% @user_items.each do |item| %>
+			<%= link_to item.title, item %>
+			<%= item.created_at %>
+		    <%= item.item_comments.count %>
+		<% end %>
+	</div><!-- /col -->
+</div><!-- /row -->
